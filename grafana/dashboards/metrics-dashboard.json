@@ -1,0 +1,14 @@
+{
+ "title": "App Metrics Dashboard",
+ "panels": [
+{
+ "type": "graph",
+ "title": "Request Rate",
+ "targets": [
+{
+ "expr": "rate(app_requests_total[1m])"
+}
+]
+}
+]
+}

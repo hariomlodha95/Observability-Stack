@@ -1,0 +1,14 @@
+{
+"title": "Logs & Traces Dashboard",
+"panels": [
+{
+"type": "logs",
+"title": "Application Logs",
+"targets": [
+{
+"expr": "{job=\"app\"}"
+}
+]
+}
+]
+}
