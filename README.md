@@ -18,7 +18,7 @@ All components are integrated using Docker Compose.
   - Docker & Docker Compose
 
 ## 📂 Project Structure  
-'''
+```
 observability-stack/
 ├── app
 │   ├── app.py
@@ -34,7 +34,7 @@ observability-stack/
 │       ├── metrics-dashboard.json
 │       └── logs-traces-dashboard.json
 └── README.md
-'''
+```
 
 ▶️ How to Run the Project
 1️⃣ Prerequisites
@@ -42,57 +42,57 @@ observability-stack/
   - Docker Compose installed
 Verify installation:
 
-'''
+```
 docker --version
 docker compose version
-'''
+```
 
 2️⃣ Start the Observability Stack
-'''
+```
 docker compose up -d
-'''
+```
 
 Check running containers:
-'''
+```
 docker compose ps
-'''
+```
 
 ## 🌐 Service Access URLs
-'''
+```
 Python Application	  http://<server-ip>:5000
 Application Metrics	  http://<server-ip>:5000/metrics
 Prometheus	          http://<server-ip>:9091
 Grafana	              http://<server-ip>:3000
 Jaeger UI	            http://<server-ip>:16686
 Loki API	            http://<server-ip>:3100
-'''
+```
 
 📊 Grafana Configuration
 🔹 Default Login
-'''
+```
 Username: admin
 Password: admin
-'''
+```
 
 🔹 Add Data Sources
 Prometheus Data Source
-'''
+```
 URL: http://prometheus:9090
-'''
+```
 
 Loki Data Source
-'''
+```
 URL: http://loki:3100
-'''
+```
 Jaeger is used for tracing and can be accessed through the Explore section in Grafana or directly via the Jaeger UI.
 
 
 ## 📈 Metrics Monitoring
   - The application exposes metrics at the /metrics endpoint
   - Custom metric used:
-'''
+```
 app_requests_total
-'''
+```
   - Prometheus scrapes the application successfully
   - Grafana dashboards visualize:
     - HTTP request count
@@ -104,22 +104,22 @@ app_requests_total
   - Promtail collects logs and sends them to Loki
   - Logs can be viewed in Grafana:
 
-'''
+```
 Grafana → Explore → Loki
-'''
+```
 Example log query:
-'''
+```
 {job="python-app"}
-'''
+```
 
 ## 🔍 Distributed Tracing
   - OpenTelemetry is used for tracing HTTP requests
   - Each incoming request generates a trace span
   - Traces can be viewed in:
 
-'''
+```
 Jaeger UI → Search → Service: python-app
-'''
+```
 Traces provide:
   - Request latency
   - Request flow across services
