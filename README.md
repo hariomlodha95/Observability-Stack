@@ -67,7 +67,7 @@ Jaeger UI	            http://<server-ip>:16686
 Loki API	            http://<server-ip>:3100
 ```
 
-📊 Grafana Configuration
+## 📊 Grafana Configuration
 🔹 Default Login
 ```
 Username: admin
