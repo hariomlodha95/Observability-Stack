@@ -140,6 +140,6 @@ This project successfully demonstrates a Complete Observability Stack using mode
 It provides unified visibility into application behavior through Metrics, Logs, and Traces, making monitoring and troubleshooting efficient and scalable.
 
 ## 👨‍💻 Author
-   Hariom 
-   Observability / DevOps Project
-   India 🇮🇳
+-- Hariom 
+-- Observability / DevOps Project
+-- India 🇮🇳
